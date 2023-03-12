@@ -1,0 +1,72 @@
+* {
+    font-size: 20px;
+    font-family:fantasy;
+    font-weight: 900;
+    color: black;
+}
+
+.bayan {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.bayan input:checked + label::after{
+    content: '\1F609';
+}
+
+.bayan input:checked + label + .field_img{
+    height: auto;
+    
+}
+
+.bayan .field_img{
+    height: 0;
+    overflow: hidden;
+}
+
+/* .bayan:hover input, */
+.bayan:hover label,
+.bayan:hover label::after{
+    cursor: pointer;
+    color: orange;
+    content: '\1F60C';
+    border-color: orange;
+    /* z-index: 3; */
+}
+
+.bayan input:checked + label:hover{
+    color: black;
+}
+
+.bayan input {
+    display: none;
+}
+
+img {
+    width: 50%;
+}
+
+span {
+    display: none;
+}
+
+
+
+label {
+    border-block-start: 1px solid black;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    box-shadow: 2px 5px 8px 1px gainsboro;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* label:hover::after{
+    content: '\1F60C';
+    cursor: pointer;
+    color: orange;
+} */
