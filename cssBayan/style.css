@@ -8,9 +8,11 @@
 .bayan {
     padding-left: 15%;
     padding-right: 15%;
+    transition: 1s ease-out;
 }
 
-.bayan input:checked + label::after{
+.bayan input:checked + label::after,
+.bayan input:hover + label::after{
     content: '\1F609';
 }
 
@@ -19,19 +21,21 @@
     
 }
 
+label:hover + .field_img{
+    height: auto;
+}
+
 .bayan .field_img{
     height: 0;
     overflow: hidden;
 }
 
-/* .bayan:hover input, */
 .bayan:hover label,
 .bayan:hover label::after{
     cursor: pointer;
     color: orange;
     content: '\1F60C';
     border-color: orange;
-    /* z-index: 3; */
 }
 
 .bayan input:checked + label:hover{
@@ -46,12 +50,6 @@ img {
     width: 50%;
 }
 
-span {
-    display: none;
-}
-
-
-
 label {
     border-block-start: 1px solid black;
     border-bottom-right-radius: 20px;
@@ -64,9 +62,3 @@ label {
     justify-content: space-between;
     padding: 5px;
 }
-
-/* label:hover::after{
-    content: '\1F60C';
-    cursor: pointer;
-    color: orange;
-} */
