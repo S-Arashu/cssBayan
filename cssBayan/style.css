@@ -1,5 +1,5 @@
 * {
-    font-size: 20px;
+    font-size: 1.12rem;
     font-family:fantasy;
     font-weight: 900;
     color: black;
@@ -8,24 +8,29 @@
 .bayan {
     padding-left: 15%;
     padding-right: 15%;
-    transition: 1s ease-out;
 }
 
 .bayan input:checked + label::after,
 .bayan input:hover + label::after{
+    pointer-events: auto;
     content: '\1F609';
+    cursor: pointer;
+    transition: transform .35s;
+    transform: scaleX(-1);
 }
 
 .bayan input:checked + label + .field_img{
     height: auto;
-    
 }
 
-label:hover + .field_img{
+label:hover + .field_img,
+.field_img:hover {
     height: auto;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
-.bayan .field_img{
+.field_img{
     height: 0;
     overflow: hidden;
 }
@@ -36,10 +41,19 @@ label:hover + .field_img{
     color: orange;
     content: '\1F60C';
     border-color: orange;
+    pointer-events: auto;
+    
+}
+
+label:hover::after{
+    transition: transform .35s;
+    transform: scaleX(-1);
+    pointer-events: auto;
 }
 
 .bayan input:checked + label:hover{
     color: black;
+    pointer-events: auto;
 }
 
 .bayan input {
@@ -48,6 +62,7 @@ label:hover + .field_img{
 
 img {
     width: 50%;
+    
 }
 
 label {
@@ -61,4 +76,35 @@ label {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    
+}
+
+.bayan label::after {
+
+    transition: transform .35s;
+    transform: scaleX(1);
+    pointer-events: auto;
+}
+
+@media (min-width:820px) and (max-width:1920px) {
+    *{
+        font-size: 1.20rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width:820px) {
+    *{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:320px) {
+    *{
+        font-size: 0.7rem;
+        transition: .3s;
+    }
+
+    label{
+        height: 50%;
+    }
 }
